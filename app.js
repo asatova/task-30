@@ -10,7 +10,7 @@ const handSeconds = document.querySelector('.hand.seconds');
 const numberElement = [];
 const barElement = [];
 
-// Création des heures
+
 for (let i = 1; i<=12; i++) {
     numberElement.push(
         `<span style="--index:${i};"><p>${i}</p></span>`
@@ -19,7 +19,7 @@ for (let i = 1; i<=12; i++) {
 numberHours.insertAdjacentHTML("afterbegin", numberElement.join(""));
 //
 
-//  Creation de la bar des secondes
+
 for (let i = 1; i<=60; i++) {
     barElement.push(
         `<span style="--index:${i};"><p></p></span>`
@@ -28,7 +28,7 @@ for (let i = 1; i<=60; i++) {
 barSeconds.insertAdjacentHTML("afterbegin", barElement.join(""));
 //
 
-// Creation de la fonction pour recuperer & set l'heure
+
 function getCurrentTime() {
     let date = new Date();
 
@@ -42,8 +42,8 @@ function getCurrentTime() {
 }
 //
 
-// Appel de getCurrentTime(); au chargement
+
 getCurrentTime();
 
-// Appel de getCurrentTime(); pour mettre les eguilles toute les secondes
+
 setInterval(getCurrentTime, 1000); // 1000ms donc 1s
