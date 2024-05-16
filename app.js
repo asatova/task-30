@@ -29,7 +29,7 @@ barSeconds.insertAdjacentHTML("afterbegin", barElement.join(""));
 //
 
 
-function getCurrentTime() {
+function setCurrentTime() {
     let date = new Date();
 
     let currentHours = date.getHours();
@@ -43,7 +43,7 @@ function getCurrentTime() {
 //
 
 
-getCurrentTime();
+setCurrentTime();
 
 
-setInterval(getCurrentTime, 1000); // 1000ms donc 1s
+setInterval(setCurrentTime, 1000); // 1000ms donc 1s
